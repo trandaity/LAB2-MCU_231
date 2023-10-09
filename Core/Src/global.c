@@ -8,6 +8,6 @@
 #include "global.h"
 
 int index_led = 0;
-int hour = 15;
-int minute = 8;
-int second = 50;
+int hour = 19;
+int minute = 59;
+int second = 55;

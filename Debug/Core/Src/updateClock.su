@@ -1,1 +1,2 @@
 updateClock.c:12:6:update7SEG	16	static
+updateClock.c:63:6:updateClockBuffer	4	static
