@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "software_timer.h"
+#include "global.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,10 +94,41 @@ int main(void) {
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
+	setTimer1(50);
 	while (1) {
 		/* USER CODE END WHILE */
-
 		/* USER CODE BEGIN 3 */
+		if (index_led >= MAX_LED) {
+			index_led = 0;
+		}
+
+		if (timer1_flag) {
+			switch (index_led++) {
+			case 0: {
+				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 0);
+				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
+
+				turnOff7SEG();
+				display7SEG(1);
+
+				break;
+			}
+			case 1: {
+				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
+				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 0);
+
+				turnOff7SEG();
+				display7SEG(2);
+
+				break;
+			}
+			default:
+				break;
+			}
+
+			setTimer1(50);
+		}
+
 	}
 	/* USER CODE END 3 */
 }
@@ -191,7 +223,7 @@ static void MX_GPIO_Init(void) {
 
 	/*Configure GPIO pin Output Level */
 	HAL_GPIO_WritePin(GPIOB,
-			segA_Pin | segB_Pin | segC_Pin | segD_Pin | segE_Pin | segF_Pin | segG_Pin,
+	segA_Pin | segB_Pin | segC_Pin | segD_Pin | segE_Pin | segF_Pin | segG_Pin,
 			GPIO_PIN_RESET);
 
 	/*Configure GPIO pins : DEBUG_LED_Pin EN0_Pin EN1_Pin */
