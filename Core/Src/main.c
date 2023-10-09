@@ -116,8 +116,8 @@ int main(void) {
 			case 0: {
 				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 0);
 				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
+				HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+				HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
 
 				turnOff7SEG();
 				display7SEG(1);
@@ -127,8 +127,8 @@ int main(void) {
 			case 1: {
 				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
 				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 0);
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
+				HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+				HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
 
 				turnOff7SEG();
 				display7SEG(2);
@@ -138,8 +138,8 @@ int main(void) {
 			case 2: {
 				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
 				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 0);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
+				HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 0);
+				HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
 
 				turnOff7SEG();
 				display7SEG(3);
@@ -149,8 +149,8 @@ int main(void) {
 			case 3: {
 				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
 				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 0);
+				HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
+				HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 0);
 
 				turnOff7SEG();
 				display7SEG(0);
