@@ -11,5 +11,6 @@
 #define MAX_LED 4
 
 extern int index_led;
+extern int led_buffer[4];
 
 #endif /* INC_GLOBAL_H_ */

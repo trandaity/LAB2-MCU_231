@@ -25,6 +25,7 @@
 #include "software_timer.h"
 #include "global.h"
 #include "display7SEG.h"
+#include "updateClock.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -112,55 +113,7 @@ int main(void) {
 		}
 
 		if (timer1_flag) {
-			switch (index_led++) {
-			case 0: {
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 0);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
-
-				turnOff7SEG();
-				display7SEG(1);
-
-				break;
-			}
-			case 1: {
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 0);
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
-
-				turnOff7SEG();
-				display7SEG(2);
-
-				break;
-			}
-			case 2: {
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 0);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
-
-				turnOff7SEG();
-				display7SEG(3);
-
-				break;
-			}
-			case 3: {
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 0);
-
-				turnOff7SEG();
-				display7SEG(0);
-
-				break;
-			}
-			default:
-				break;
-			}
-
+			update7SEG(index_led++);
 			setTimer1(50);
 		}
 
