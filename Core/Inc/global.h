@@ -8,7 +8,7 @@
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_
 
-#define MAX_LED 2
+#define MAX_LED 4
 
 extern int index_led;
 
