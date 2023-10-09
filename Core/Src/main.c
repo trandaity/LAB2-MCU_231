@@ -24,6 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "software_timer.h"
 #include "global.h"
+#include "display7SEG.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,12 +95,18 @@ int main(void) {
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
+	setTimer0(100);
 	setTimer1(50);
 	while (1) {
 		/* USER CODE END WHILE */
 		/* USER CODE BEGIN 3 */
 		if (index_led >= MAX_LED) {
 			index_led = 0;
+		}
+
+		if (timer0_flag) {
+			HAL_GPIO_TogglePin(DEBUG_LED_GPIO_Port, DEBUG_LED_Pin);
+			setTimer0(100);
 		}
 
 		if (timer1_flag) {
