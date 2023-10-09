@@ -503,8 +503,8 @@ int main(void) {
 	setTimer0(100);
  800040a:	2064      	movs	r0, #100	; 0x64
  800040c:	f000 f920 	bl	8000650 <setTimer0>
-	setTimer1(50);
- 8000410:	2032      	movs	r0, #50	; 0x32
+	setTimer1(25);
+ 8000410:	2019      	movs	r0, #25
  8000412:	f000 f931 	bl	8000678 <setTimer1>
 	while (1) {
 		/* USER CODE END WHILE */
@@ -552,8 +552,8 @@ int main(void) {
  8000452:	600a      	str	r2, [r1, #0]
  8000454:	4618      	mov	r0, r3
  8000456:	f000 f9df 	bl	8000818 <update7SEG>
-			setTimer1(50);
- 800045a:	2032      	movs	r0, #50	; 0x32
+			setTimer1(25);
+ 800045a:	2019      	movs	r0, #25
  800045c:	f000 f90c 	bl	8000678 <setTimer1>
 		if (index_led >= MAX_LED) {
  8000460:	e7d9      	b.n	8000416 <main+0x26>
