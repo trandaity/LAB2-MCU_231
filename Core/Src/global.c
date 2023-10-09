@@ -8,4 +8,4 @@
 #include "global.h"
 
 int index_led = 0;
-int led_buffer = { 1, 2, 3, 4 };
+int led_buffer[4] = { 1, 2, 3, 4 };

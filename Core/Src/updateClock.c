@@ -5,6 +5,8 @@
  *      Author: trand
  */
 
+#include "main.h"
+#include "display7SEG.h"
 #include "updateClock.h"
 
 void update7SEG(int index) {
