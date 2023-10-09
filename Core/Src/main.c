@@ -98,6 +98,7 @@ int main(void) {
 	/* USER CODE BEGIN WHILE */
 	setTimer0(100);
 	setTimer1(25);
+	setTimer2(100);
 	while (1) {
 		/* USER CODE END WHILE */
 
@@ -117,6 +118,22 @@ int main(void) {
 			setTimer1(25);
 		}
 
+		if (timer2_flag) {
+			second++;
+			if (second >= 60) {
+				second = 0;
+				minute++;
+			}
+			if (minute >= 60) {
+				minute = 0;
+				hour++;
+			}
+			if (hour >= 24) {
+				hour = 0;
+			}
+			updateClockBuffer()
+			setTimer2(100);
+		}
 	}
 	/* USER CODE END 3 */
 }
