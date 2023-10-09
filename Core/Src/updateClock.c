@@ -7,6 +7,8 @@
 
 #include "updateClock.h"
 
+int led_buffer[4] = { 1, 2, 3, 4 };
+
 void update7SEG(int index) {
 	switch (index) {
 	case 0: {
