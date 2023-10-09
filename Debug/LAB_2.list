@@ -570,12 +570,12 @@ int main(void) {
  800047c:	2180      	movs	r1, #128	; 0x80
  800047e:	483a      	ldr	r0, [pc, #232]	; (8000568 <main+0x178>)
  8000480:	f000 fd56 	bl	8000f30 <HAL_GPIO_WritePin>
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
+				HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
  8000484:	2201      	movs	r2, #1
  8000486:	f44f 7180 	mov.w	r1, #256	; 0x100
  800048a:	4837      	ldr	r0, [pc, #220]	; (8000568 <main+0x178>)
  800048c:	f000 fd50 	bl	8000f30 <HAL_GPIO_WritePin>
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
+				HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
  8000490:	2201      	movs	r2, #1
  8000492:	f44f 7100 	mov.w	r1, #512	; 0x200
  8000496:	4834      	ldr	r0, [pc, #208]	; (8000568 <main+0x178>)
@@ -601,12 +601,12 @@ int main(void) {
  80004b4:	2180      	movs	r1, #128	; 0x80
  80004b6:	482c      	ldr	r0, [pc, #176]	; (8000568 <main+0x178>)
  80004b8:	f000 fd3a 	bl	8000f30 <HAL_GPIO_WritePin>
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
+				HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
  80004bc:	2201      	movs	r2, #1
  80004be:	f44f 7180 	mov.w	r1, #256	; 0x100
  80004c2:	4829      	ldr	r0, [pc, #164]	; (8000568 <main+0x178>)
  80004c4:	f000 fd34 	bl	8000f30 <HAL_GPIO_WritePin>
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
+				HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
  80004c8:	2201      	movs	r2, #1
  80004ca:	f44f 7100 	mov.w	r1, #512	; 0x200
  80004ce:	4826      	ldr	r0, [pc, #152]	; (8000568 <main+0x178>)
@@ -632,12 +632,12 @@ int main(void) {
  80004ec:	2180      	movs	r1, #128	; 0x80
  80004ee:	481e      	ldr	r0, [pc, #120]	; (8000568 <main+0x178>)
  80004f0:	f000 fd1e 	bl	8000f30 <HAL_GPIO_WritePin>
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 0);
+				HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 0);
  80004f4:	2200      	movs	r2, #0
  80004f6:	f44f 7180 	mov.w	r1, #256	; 0x100
  80004fa:	481b      	ldr	r0, [pc, #108]	; (8000568 <main+0x178>)
  80004fc:	f000 fd18 	bl	8000f30 <HAL_GPIO_WritePin>
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 1);
+				HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
  8000500:	2201      	movs	r2, #1
  8000502:	f44f 7100 	mov.w	r1, #512	; 0x200
  8000506:	4818      	ldr	r0, [pc, #96]	; (8000568 <main+0x178>)
@@ -663,12 +663,12 @@ int main(void) {
  8000524:	2180      	movs	r1, #128	; 0x80
  8000526:	4810      	ldr	r0, [pc, #64]	; (8000568 <main+0x178>)
  8000528:	f000 fd02 	bl	8000f30 <HAL_GPIO_WritePin>
-				HAL_GPIO_WritePin(EN0_GPIO_Port, EN2_Pin, 1);
+				HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, 1);
  800052c:	2201      	movs	r2, #1
  800052e:	f44f 7180 	mov.w	r1, #256	; 0x100
  8000532:	480d      	ldr	r0, [pc, #52]	; (8000568 <main+0x178>)
  8000534:	f000 fcfc 	bl	8000f30 <HAL_GPIO_WritePin>
-				HAL_GPIO_WritePin(EN1_GPIO_Port, EN3_Pin, 0);
+				HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 0);
  8000538:	2200      	movs	r2, #0
  800053a:	f44f 7100 	mov.w	r1, #512	; 0x200
  800053e:	480a      	ldr	r0, [pc, #40]	; (8000568 <main+0x178>)
